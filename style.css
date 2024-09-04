@@ -1,0 +1,1018 @@
+/* ------------------------------------------------------------ */ 
+/* ------------   A L L E/ F L E R E   S I D E R  ------------- */ 
+/* ------------------------------------------------------------ */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --gull-gul: #e6bd43;
+    --graasvart: #252525;
+    --svart: #000;
+    --hvit: #fff;
+
+    --lightgrey: #f3f3f3;
+    /* Denne lyse gråfargen er lagt til da det er noen steder på nettstedet hvor det er en lysgrå-farge, som ikke finnes i fargekodene oppgitt i oppgaven*/
+    /* Jeg har for vane å bruke root /fargevariabel, det har jeg lært her: https://www.youtube.com/watch?v=PHO6TBq_auI */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    min-width: 300px;
+    max-width: 1600px;
+    height: auto;
+    
+}
+
+#background__yellow {
+    background-color: var(--gull-gul);
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    margin: 0.5rem;
+}
+
+
+/* ------------------------------------------------------------ */ 
+/* ----------------------   H E A D E R  ---------------------- */ 
+/* ------------------------------------------------------------ */ 
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hvit);
+    padding-block: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    text-decoration: none;
+    color: var(--svart);
+}
+
+.list__items {
+    width: fit-content;
+    margin: 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#btn__contact {
+    width: auto;
+    height: auto;
+    padding: 0.7rem;
+
+    background-color: var(--gull-gul);
+    font-weight: 700;
+    color: var(--svart);
+}
+
+/* Markering for gjeldende side: */
+
+.active {
+    font-weight: 800;
+}
+
+.active::after {
+    content: "";
+    display: block;
+    width: auto;
+    height: 3px;
+    margin: 0 auto;
+    
+    border-bottom: var(--gull-gul) 3px solid;
+}
+
+/* ------------------------------------------------------------ */ 
+/* ------------------   I N D E X. H T M L  ------------------- */ 
+/* ------------------------------------------------------------ */ 
+
+/* section 1 - video */
+.heading__video {
+    display: none;
+}
+
+/* section 1 - compelling headline*/ 
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.heading__image {
+    background-image: url(IMG/laptop-2557572_640\(1\).jpg); 
+    /* Bildekreditt: https://pixabay.com/no/photos/laptop-mac-datamaskin-nettleser-2557572/ Fotograf: https://pixabay.com/no/users/stocksnap-894430/*/ 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%; 
+    min-height: 400px;
+
+    margin: 0;
+}
+
+.heading__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    min-height: 450px;
+    background-color: rgba(255, 255, 255, 0.536);
+}
+
+.heading__title {
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+
+.heading__text {
+    width: fit-content;
+    font-size: 0.9rem;
+}
+
+.btn__index {
+    background-color: var(--gull-gul);
+    color: var(--graasvart);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+    padding: 0.5rem 4.5rem 0.5rem 1rem;
+    margin: 1rem;
+    width: 80%;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.3rem;
+    text-align: left;
+    text-wrap: wrap;
+    text-decoration: none;
+}
+
+/* section 2 - enganging subheading */
+
+.subheading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; 
+
+}
+
+.subheading__container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subheading__title {
+    margin: 1rem;
+    padding: 1rem;
+    line-height: 1.7rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* section 3 - about our company */
+
+.about__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; 
+
+    background-color: var(--gull-gul);
+}
+
+.about__leftcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about__lefttitle {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    line-height: 1.7rem;
+    text-align: left;
+    font-size: 1.3rem;
+    text-wrap: wrap;
+}
+
+#btn__border {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: inherit;
+    height: auto;
+
+    color: var(--svart);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: var(--svart) 3px solid;
+}
+
+/* section 4 - our services -- også på about.html  */
+
+.service {
+    padding: 2rem;
+}
+
+.service__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+}
+
+.service__container {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.fa-users, 
+ .fa-cloud-arrow-up,
+ .fa-code,
+ .fa-wifi {
+    font-size: 1.8rem;
+ }
+
+/* section 5 - newsletter */
+
+.signup {
+    padding: 0.8rem;
+    
+    background-color: var(--lightgrey);
+
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.signup__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    padding-bottom: 1rem;
+}
+
+#email {
+    width: 50%;
+    padding: 1rem;
+    margin: 0.1rem;
+    border: none;
+}
+
+#email::placeholder {
+    font-size: 0.7rem;
+}
+
+#btn__signup {
+    padding: 1rem;
+    margin: 0.1rem;
+    background-color: var(--gull-gul);
+    
+    color: var(--svart);
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+
+/* ------------------------------------------------------------ */ 
+/* -------------------   A B O U T.H T M L  ------------------- */ 
+/* ------------------------------------------------------------ */ 
+
+/* --- about header picture --- */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+
+    width: 100%;
+    height: auto;
+}
+
+.about__image {
+    background-image: url(IMG/laptop-2557572_640\(1\).jpg); 
+    /* Bildekreditt: https://pixabay.com/no/photos/laptop-mac-datamaskin-nettleser-2557572/ Fotograf: https://pixabay.com/no/users/stocksnap-894430/*/ 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 4rem;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem;
+    background-color: #ffffffd5;
+}
+
+.about__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    padding-block: 1rem;
+
+    text-align: left;
+    text-wrap: wrap;
+    line-height: 1.3rem;
+}
+
+.about__text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    text-align: left;
+    text-wrap: wrap;
+}
+
+#btn__about {
+    background-color: var(--gull-gul);
+    color: var(--graasvart);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    line-height: 1.3rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+
+    text-align: left;
+    text-wrap: wrap;
+    text-decoration: none;
+    
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 80%;
+}  
+
+/* ---- Client ---- */
+
+.client__section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gull-gul);
+
+    padding-block: 1rem;
+}
+
+.client__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+
+    margin: 0.5rem;
+}
+
+.client__logos img {
+    width: 35%;
+}
+
+/* ------ Contact us + contact information */
+
+.contact {
+    background-color: var(--lightgrey);
+    padding: 3rem;
+}
+
+.title__contact {
+    margin-top: 1rem;
+    padding-block: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+
+#fname, 
+#subject,
+#message {
+    border: none;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+input[type="text"] {
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+#submit {
+    background-color: var(--gull-gul);
+    color: var(--svart);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border: none;
+    text-decoration: none;
+    text-align: left;
+    font-weight: 700;
+    max-width: 45%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.contact__text{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    
+    line-height: 1.2rem;
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__link {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.fa-location-pin, 
+.fa-phone,
+.fa-envelope {
+    font-size: 20px ;
+    margin-right: 0.5rem;
+}
+
+.fa-location-pin {
+    padding: 0.4rem;
+}
+
+.fa-phone, 
+.fa-envelope {
+    padding: 0.2rem;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* ------------------------------------------------------------ */ 
+/* ----------------   P R O D U C T S.H T M L  ---------------- */ 
+/* ------------------------------------------------------------ */ 
+
+/* section 1: Heading Portfolio - samme som index.html section 1 */
+
+/* section 2: explore previous jobs */
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+.portfolio__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__box::after {
+    content: "";
+    background-color: var(--gull-gul);
+    width: auto;
+    height: 3px;
+    margin-top: -10px;
+    margin-bottom: 1rem;
+}
+
+.portfolio__title {
+    margin-bottom: 1rem ;
+    font-size: 1.2rem;
+}
+
+.portfolio__jobs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem ;
+}
+
+.portfolio__list {
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio__link {
+    border: var(--svart) 2px solid;
+    color: var(--svart);
+    text-decoration: none;
+    padding: 0.7rem;
+}
+
+/* ----- artikkelkort ------ */
+
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.article__cards {
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    object-position: left;
+    margin-top: 1rem;
+    /*max-width: 692px; C-krav: max bredde 692px*/
+    height: auto;
+}
+
+.article__cards, img {
+    max-width: 100%;
+    height: 100%;
+}     
+
+.card__text {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+   /* --------------------  Skip to top button  ------------------*/
+
+   .skip {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+
+    margin: 1rem;
+    padding: 0.5rem;
+
+    background-color: var(--svart);
+    border: var(--svart) 2px solid;
+    border-radius: 3px;
+}
+
+.skip__button {
+    font-size: 1.6rem;
+    color: var(--hvit);
+    text-decoration: none;
+}
+
+.skip__button .fa-arrow-up {
+    color: var(--hvit);
+}
+
+
+/* ------------------------------------------------------------ */ 
+/* ----------------------   F O O T E R  ---------------------- */ 
+/* ------------------------------------------------------------ */ 
+
+footer {
+    background-color: var(--graasvart);
+    width: 100%;
+    height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer__copyright {
+    color: var(--hvit);
+    font-size: 0.8rem;
+}
+
+.footer__some {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 1rem;
+}
+
+.fa-square-facebook, 
+.fa-square-instagram,
+.fa-linkedin {
+    color: var(--hvit);
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------------------------------------------ */ 
+/* MEDIA QUERY - Hvordan det skal se ut i desktop */
+/* ------------------------------------------------------------ */ 
+
+@media screen and (min-width: 550px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr min(45%, 1000px) 1fr; /* vil at innholdet skal fylle skjermen 95% frem til bredden er 40rem*/
+        grid-template-rows: 5% 1fr 5%;
+    }
+
+    .text__maxwidth {
+        width: min(90%, 800px);
+    }
+
+   /* ------------------   H E A D E R  &  N A V  ------------------- */ 
+
+    header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .list__items {
+        font-size: 1.1rem;
+    }
+
+    #btn__contact {
+        padding: 0.8rem;
+    }
+
+    #btn__contact:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+        font-weight: 700;
+        
+    }
+
+    /* ------ main ------ */ 
+
+    main  {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+  /* ------------------   I N D E X.H T M L  ------------------- */ 
+
+    /* sec 1: video */
+
+    .header__invisible {
+        display: none;
+    }
+
+    .heading__video {
+        display: block;
+        width: 100%;
+        margin: 0;
+        background-color: var(--hvit);
+    }
+
+    .heading__videocontainer {
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        width: 100%;
+        height: 400px;
+
+        background-color: #ffffff8e;
+        text-align: center;
+    }
+
+    video {
+        width: 100%;
+        height: 400px;
+
+        object-fit: cover;
+        object-position: top;
+    }
+
+    /* sec 1: heading */
+    
+    .heading__title {
+        font-size: 2.4rem;
+    }
+
+    .btn__index {
+        width: fit-content;
+        height: auto;
+        padding: 0.8rem;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    .btn__index:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+    }
+
+    /* sec 2: subheading */
+
+    .subheading {
+        padding: 2rem;
+    }
+
+    .subheading__container {
+        padding: 2rem;
+        width: 800px;
+    }
+
+    .subheading__title {
+        font-size: 2.1rem;
+        line-height: 2.3rem;
+        text-wrap: wrap;
+    }
+
+    /* sec 3: about */
+
+    .about__left {
+        display: flex;
+        flex-direction: row;
+        padding: 2.5rem;
+    }
+
+
+    #btn__border {
+        width: fit-content;
+    }
+
+    #btn__border:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+    }
+
+    /* sec 4: service */
+
+    .service__section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* sec 5: newsletter */
+    
+    .signup {
+        padding: 1.5rem;
+    }
+
+
+    #email, 
+    #btn__signup {
+        margin: 0.1rem;
+        width: fit-content;
+    }
+
+    #btn__signup:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+    }
+
+    /* -------------------   A B O U T.H T M L  ------------------- */
+
+    /* ---  sec 1: about heading---- */
+    .about__image {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: end;
+        padding: 4rem;
+    }
+
+   .about__container {
+        padding: 2.5rem;
+        width: 50%;
+   }
+
+    .about__title {
+        font-size: 1.1rem;
+    }
+
+    .about__text {
+        line-height: 1.2rem;
+    }
+
+    #btn__about {
+        width: fit-content;
+    }
+
+    #btn__about:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+    }
+
+    /* sec 2: service - samme som index sec 4 */
+    
+    /* sec 3: clients */
+
+    .client__logos {
+        display: flex;
+        margin: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem;
+    } 
+
+    .client__logos img {
+        width: fit-content;
+        height: auto;
+        margin: 1rem;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* sec 4: contact us */
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: 1100px;
+    }
+
+    #submit {
+        width: fit-content;
+        margin-top: 0;
+    }
+
+    #submit:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+    }
+
+    .contact__text {
+        margin-bottom: 0.5rem;
+    }
+    .contact__link {
+        margin: 0.2rem;
+    }
+
+    /* ----------------   P R O D U C T S.H T M L  ---------------- */ 
+
+    .portfolio {
+        padding: 3rem;
+    }
+
+    .portfolio__link:hover {
+        background-color: var(--graasvart);
+        color: var(--gull-gul);
+        border: none;
+    }
+
+    .portfolio__title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .portfolio__jobs {
+        margin-top: 1rem;
+    }
+
+    /* ---------- artikkelkort ----------- */ 
+    .card__container > * {
+        flex: 1 1 30%; /* grow 1 shrink 1 --> jeg vil at kortene skal vokse og krympe fra flex-basisen. Flex basis er satt til 30% fordi jeg vil ha plass til 3 kort i desktop, 1/3 av 100% */
+    }
+
+    /* Ekstern hjelp om Flex Grow: https://www.youtube.com/watch?v=r1IitKbJRFE&t=697s */
+
+    .article__cards {
+        max-width: 690px; /* artikkelkort skal ikke være mer enn 692px */
+    }
+
+    .article__cards, img {
+        max-width: 692px;
+        height: auto;
+    } 
+  
+    .article__cards:hover {
+        transform: scale(1.05);
+        transform-origin: center;
+        transition: 1800ms ease;
+    }
+
+
+    /* ----------------------    F O O T E R   -------------------- */ 
+
+    footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .footer__section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fa-square-facebook, 
+    .fa-square-instagram,
+    .fa-linkedin {
+    font-size: 2rem;
+}
+
+}
