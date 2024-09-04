@@ -45,7 +45,7 @@ body {
     background-color: var(--gull-gul);
 }
 
-#logo {
+.logo {
     width: 100px;
     height: auto;
     margin: 0.5rem;
